@@ -1,0 +1,47 @@
+{% extends 'rsa/base.html '%}
+
+
+{% block title %} Shamir {% endblock %}
+
+{% block content %}
+    {% if checkboxes_alert %}
+        <div class="alert alert-danger" role="alert">
+            {{checkboxes_alert}}
+        </div>
+    {% endif %}
+
+    {% if result %}
+        <h3>Result  of encryption: </h3>
+        <p>{{result}}</p>
+
+    {% else %}
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            {{ form.as_p }}
+
+
+
+            <label for="nvalue">Input P :</label><br>
+            <input type="text" id="nvalue" name="nvalue" required  size="10" /><br>
+
+            <label for="kvalue">Input K (minimum number of parts required to recover the secret (k)):</label><br>
+            <input type="text" id="kvalue" name="kvalue" required  size="10" /><br>
+
+
+            <label for="text">Input Shares:</label><br>
+            <input type="text" id="text" name="text" required  size="300" /><br>
+
+
+
+
+          <div>
+              <br>
+            <button class = " btn btn-warning">Decipher</button>
+          </div>
+        </form>
+    {% endif %}
+
+{% endblock %}
+
+

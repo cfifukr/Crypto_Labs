@@ -1,0 +1,37 @@
+{% extends 'rsa/base.html '%}
+
+
+{% block title %} RSA {% endblock %}
+
+{% block content %}
+    {% if checkboxes_alert %}
+        <div class="alert alert-danger" role="alert">
+            {{Checkboxes_alert}}
+        </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token%}
+        {{ form.as_p }}
+
+        <label for="pvalue">Input P:</label><br>
+        <input type="text" id="pvalue" name="pvalue" required  size="10" /><br>
+
+        <label for="qvalue">Input Q:</label><br>
+        <input type="text" id="qvalue" name="qvalue" required  size="10" /><br>
+
+        <label for="evalue">Input E:</label><br>
+        <input type="text" id="evalue" name="evalue" required  size="10" /><br>
+
+
+      <div>
+          <br>
+        <button class = " btn btn-warning">Encipher</button>
+      </div>
+    </form>
+    {{ input_file }}
+    {{ output_file }}
+{% endblock %}
+
+
+

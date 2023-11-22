@@ -1,0 +1,38 @@
+{% extends 'rsa/base.html '%}
+
+
+{% block title %} El Gamal {% endblock %}
+
+{% block content %}
+    {% if checkboxes_alert %}
+        <div class="alert alert-danger" role="alert">
+            {{Checkboxes_alert}}
+        </div>
+    {% endif %}
+    {% if result1  %}
+        <h3>Result  of encryption: </h3>
+        <p>m: {{result1}}</p>
+        <p>k: {{result2}}</p>
+        <p>open_key: {{open_key}}</p>
+        <p>close_key: {{close_key}}</p>
+
+
+    {%else %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token%}
+        {{ form.as_p }}
+
+        <label for="pvalue">Input P:</label><br>
+        <input type="text" id="pvalue" name="pvalue" required  size="10" /><br>
+
+
+
+
+      <div>
+          <br>
+        <button class = " btn btn-warning">Encipher</button>
+      </div>
+    </form>
+
+    {% endif %}
+{% endblock %}

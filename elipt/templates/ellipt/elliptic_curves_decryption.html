@@ -1,0 +1,44 @@
+{% extends 'rsa/base.html '%}
+
+
+{% block title %} Elliptic curves {% endblock %}
+
+
+{% block content %}
+    {% if checkboxes_alert %}
+        <div class="alert alert-danger" role="alert">
+            {{Checkboxes_alert}}
+        </div>
+    {% endif %}
+    {% if result %}
+        <h3>Result  of decryption: </h3>
+        <p>{{result}}</p>
+
+    {%else %}
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            {{ form.as_p }}
+
+            <label for="pvalue">Input P:</label><br>
+            <input type="text" id="pvalue" name="pvalue" required  size="10" /><br>
+
+            <label for="xvalue">Input Close Key(X):</label><br>
+            <input type="text" id="xvalue" name="xvalue" required  size="10" /><br>
+
+
+            <label for="mvalue">Input M:</label><br>
+            <input type="text" id="mvalue" name="mvalue" required  size="10" /><br>
+
+            <label for="kvalue">Input K:</label><br>
+            <input type="text" id="kvalue" name="kvalue" required  size="150" /><br>
+
+            <div>
+                <br>
+                <button class = "btn btn-warning">Decipher</button>
+            </div>
+        </form>
+    {% endif %}
+{% endblock %}
+
+
