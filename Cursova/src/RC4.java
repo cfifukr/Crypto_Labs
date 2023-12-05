@@ -9,6 +9,8 @@ public class RC4 {
         reset(key);
     }
 
+
+
     public void reset(byte[] key) {
         if (key == null || key.length == 0)
             throw new NullPointerException("Empty encryption key");

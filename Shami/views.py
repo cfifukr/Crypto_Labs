@@ -4,6 +4,7 @@ from sympy import mod_inverse
 
 SECRET = 42
 
+
 global shares
 def generate_coefficients(secret, threshold, prime):
     coefficients = [secret] + [random.randint(1, prime - 1) for _ in range(threshold - 1)]
@@ -48,6 +49,8 @@ def shamir_encrypt(request):
 
 
         if k<= n:
+
+            print(shares=encrypt_share(SECRET, k, n, p))
             global shares
             shares = encrypt_share(SECRET, k, n, p)
             return render(request, "shamir/Shamir_encipher.html", {"result": shares})

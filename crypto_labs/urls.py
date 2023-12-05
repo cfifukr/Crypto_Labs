@@ -1,7 +1,6 @@
 
 from django.contrib import admin
 from django.urls import path
-from RSA import views as viewsRSA
 from El_Gamal import views as viewsGamal
 from elipt import views as viewsEllipt
 from Shami import views as viewsShamir
@@ -9,9 +8,6 @@ from Shami import views as viewsShamir
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',viewsRSA.main_page, name = "main_page"),
-
-    path('rsa_decipher/', viewsRSA.RSA_decipher_page, name= "rsa_decipher_page"),
-    path('rsa_encipher/', viewsRSA.RSA_cipher_page, name= "rsa_cipher_page"),
 
     path('el-gamal_decipher/', viewsGamal.el_gamal_decrypt_page, name= "el_gamal_decipher_page"),
     path('el-gamal_encipher/', viewsGamal.el_gamal_encrypt_page, name= "el_gamal_cipher_page"),

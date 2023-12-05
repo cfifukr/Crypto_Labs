@@ -3,7 +3,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 from .forms import FileUploadForm
 import os
-import sympy
 
 class rsa_functions:
     def extended_gcd(a, b):
