@@ -19,7 +19,9 @@ public class TerminalECDSA {
         String message = sc.nextLine();
 
         byte[] signature = SignatureECDSA.sign(message, privateKey);
-        boolean isVerified = SignatureECDSA.verify(message, signature, publicKey);
+        byte[] signature2 = SignatureECDSA.sign("hello", privateKey);
+
+        boolean isVerified = SignatureECDSA.verify(message, signature2, publicKey);
 
         System.out.println("Message: " + message);
         System.out.println("Signature: " + SignatureECDSA.bytesToHex(signature));

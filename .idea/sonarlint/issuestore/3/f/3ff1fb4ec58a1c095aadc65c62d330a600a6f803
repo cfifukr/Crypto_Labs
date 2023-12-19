@@ -4,11 +4,11 @@
 Jpython:S1481"+Replace unused local variable "y" with "_".(µË8¨‘à¬¶1
 \python:S112">Replace this generic exception class with a more specific one.(ÀÊ•Î8¨‘à¬¶1
 ypython:S1542"URename function "RSA_cipher_page" to match the regular expression ^[a-z_][a-z0-9_]*$.(§×ÌÁÿÿÿÿÿ8¨‘à¬¶1
-Ppython:S1481-"2Remove the unused local variable "content_output".(»'8¨‘à¬¶1
-Spython:S1481'"4Remove the unused local variable "output_file_name".(‰ŒšÀ8¨‘à¬¶1
 Rpython:S1481&"3Remove the unused local variable "input_file_name".(Â†îµ8¨‘à¬¶1
+Spython:S1481'"4Remove the unused local variable "output_file_name".(‰ŒšÀ8¨‘à¬¶1
+Ppython:S1481-"2Remove the unused local variable "content_output".(»'8¨‘à¬¶1
 vpython:S1542D"WRename function "RSA_decipher_page" to match the regular expression ^[a-z_][a-z0-9_]*$.(¹¨©Ä8¨‘à¬¶1
-Ppython:S1481T"2Remove the unused local variable "content_output".(»'8©‘à¬¶1
 Spython:S1481N"4Remove the unused local variable "output_file_name".(‰ŒšÀ8©‘à¬¶1
 Opython:S1481Q"1Remove the unused local variable "content_input".(óê°\8©‘à¬¶1
+Ppython:S1481T"2Remove the unused local variable "content_output".(»'8©‘à¬¶1
 Rpython:S1481M"3Remove the unused local variable "input_file_name".(Â†îµ8¨‘à¬¶1

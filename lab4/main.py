@@ -90,8 +90,7 @@ print("Original:", plaintext)
 
 public_key2, ciphertext = encrypt(plaintext, public_key)
 print("Encrypted:", ciphertext)
-for i in ciphertext:
-    print(i)
+
 
 decrypted_text = decrypt(ciphertext, public_key2, private_key)
 print("Decrypted:", decrypted_text)

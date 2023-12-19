@@ -24,7 +24,7 @@ public class TerminalDSA {
 
 
 
-        boolean isVerified = SignatureDSA.verify(message, signature, publicKey);
+        boolean isVerified = SignatureDSA.verify(message , signature, publicKey);
 
         System.out.println("Message: " + message);
         System.out.println("Signature: " + SignatureDSA.bytesToHex(signature));

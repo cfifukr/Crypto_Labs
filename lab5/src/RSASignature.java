@@ -53,9 +53,8 @@ public class RSASignature {
             String verifyInput = scanner.nextLine();
             if (verifyInput.toLowerCase().equals("так")) {
 
-
-                //RSASignature rsaSignatureTest = new RSASignature(1024);
-                //String signature1 = rsaSignatureTest.signMessage(message + "324");
+                RSASignature rsaSignatureTest = new RSASignature(1024);
+                String signature1 = rsaSignatureTest.signMessage(message + "324");
 
 
                 boolean isVerified = rsaSignature.verifySignature(message, signature);
